@@ -13,6 +13,7 @@ import AuthProviders from './providers/AuthProviders';
 import Orders from './components/Oders/Orders';
 import PrivateRoute from './components/routes/PrivateRoute';
 import Profile from './components/Profile/Profile';
+import ChefInfo from './components/ChefInfo/ChefInfo';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +21,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch(`http://localhost:8000/chefInfo`)
+      },
+      
+      {
+        path: '/chefInfo/:id',
+        element: <ChefInfo></ChefInfo>,
+        loader: ({params}) => fetch(`http://localhost:8000/chefInfo/${params.id}`)
       },
       {
         path: '/login',
