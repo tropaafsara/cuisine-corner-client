@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
+import "./Header.css"
 
 const Header = () => {
 
@@ -13,13 +14,18 @@ const Header = () => {
     }
 
     return (
-        <div>
-            <div className="navbar bg-neutral text-neutral-content">
-                 <a className="btn btn-ghost normal-case text-xl">Cuisine Corner</a>
-                 <Link className="btn btn-ghost normal-case text-xl"  to='/'>Home</Link>
-                 <Link className="btn btn-ghost normal-case text-xl" to='/orders'>Orders</Link>
-                 {user && <Link className="btn btn-ghost normal-case text-xl" to='/profile'>Profile</Link>}
-                 <Link className="btn btn-ghost normal-case text-xl" to='/register'>Register</Link>
+        <div className='mb-3'>
+            <div className="navbar flex justify-between">
+                 <div>
+                 <a className="normal-case text-3xl text-cyan-600">Cuisine Corner</a>
+                 </div>
+                 <div className=''>
+                    
+
+                 <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg"  to='/'>Home</NavLink>
+                 <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg" to='/orders'>Orders</NavLink>
+                 {user && <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg" to='/profile'>Profile</NavLink>}
+                 <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg " to='/register'>Register</NavLink>
                  
                  
                  {  user ? 
@@ -27,8 +33,10 @@ const Header = () => {
                     <span>{user.email}</span>
                     <button onClick={handleLogout} className="btn btn-active btn-primary">Sign Out</button>
                  </>
-                  :<><Link className="btn btn-ghost normal-case text-xl" to='/login'>Login</Link></> }
+                  :<><NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg" to='/login'>Login</NavLink></> }
+                 </div>
             </div>
+            <hr></hr>
         </div>
     );
 };

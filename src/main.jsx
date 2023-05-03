@@ -14,10 +14,12 @@ import Orders from './components/Oders/Orders';
 import PrivateRoute from './components/routes/PrivateRoute';
 import Profile from './components/Profile/Profile';
 import ChefInfo from './components/ChefInfo/ChefInfo';
+import ErrorPage from './components/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

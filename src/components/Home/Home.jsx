@@ -19,29 +19,32 @@ const Home = () => {
     const chefInfos = useLoaderData();
 
     return (
-        <div>
+        <div className=''>
+            {/* {user && <span>{user.email}</span>} */}
             
-            <h1>This is home {user && <span>{user.email}</span>}</h1>
+            <div className='flex gap-8 mb-8 text-2xl justify-center items-center'>
+                
+            
+                <img className='w-2/3 ' src="https://i.ibb.co/vkHdHkV/banner1.jpg" alt="" />
+                
 
+                <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat delectus tempore voluptas dignissimos reprehenderit, similique error libero velit dicta quae et minima obcaecati. Officia incidunt ratione nobis ullam aliquam dolores?</p>
+            </div>
+            <h1 className='mb-8 text-4xl text-center'>Our Chefs</h1>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 '>
             {
                 chefInfos.map(info => <NewsCard
-                key={info._id}
+                key={info._id}  
                 info={info}
                 >
 
                 </NewsCard>)
             }
+            </div>
+
+            
         
            
-            {/* {
-                chefInfos.map(chefInfo => <p
-                    key={chefInfo._id}
-                >
-
-                    <Link to={`/chef/${chefInfo._id}`}>{chefInfo.name}</Link>
-
-                </p>)
-            } */}
             
 
 

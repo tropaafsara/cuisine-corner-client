@@ -47,13 +47,13 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-white-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+     
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white-100">
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -78,9 +78,10 @@ const Login = () => {
       <Link to='/register'>
       <button className="link link-secondary">Don't have an Account? Register Now</button>
       </Link>
-      <div>
-      <button onClick={handleGoogleSignIn} className="btn btn-accent">GOOGLE</button>
-      <button onClick={handleGithubSignIn} className="btn btn-accent">GITHUB</button>
+      <div className='m-7 flex flex-wrap '>
+      <button onClick={handleGoogleSignIn} className="btn btn-accent">Sign In with GOOGLE</button>
+
+      <button onClick={handleGithubSignIn} className="btn btn-accent">Sign In with GITHUB</button>
       </div>
       </div>
     </div>
