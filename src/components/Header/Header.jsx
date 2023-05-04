@@ -37,11 +37,12 @@ const Header = () => {
                  
                  {  user ? 
                  <>
-                    {/* <span>{user.displayName}</span> */}
-                    {/* {console.log(user)} */}
-                    {/* <Tooltip > */}
+                    <div className='group relative m-1 flex justify-center'>
                     <img className=' mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
-                    {/* </Tooltip> */}
+                    <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">{user.displayName}</span>
+                    </div>
+                    
+                   
 
                     
                     
