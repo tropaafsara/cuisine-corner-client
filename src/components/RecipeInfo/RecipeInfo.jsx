@@ -6,9 +6,9 @@ const RecipeInfo = ({recipe}) => {
     return (
         <div>
             
-            <div className="card card-compact w-96 bg-base-100 shadow-xl content-center">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl content-center mb-7">
   <div className="card-body">
-    {/* <p>Experience : {cooking_method}</p> */}
+  
     <img src={recipe_img} alt="" />
     <p className='text-xl'>Recipe Name : <span className='text-sky-700'>{recipe_name}</span></p>
     <hr></hr>
