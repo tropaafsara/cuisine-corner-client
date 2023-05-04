@@ -25,13 +25,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:8000/chefInfo`)
+        loader: () => fetch(`https://chef-recipe-hunter-server-tasnimafsara12-gmailcom.vercel.app/chefInfo`)
       },
       
       {
         path: '/chefInfo/:id',
         element: <ChefInfo></ChefInfo>,
-        loader: ({params}) => fetch(`http://localhost:8000/chefInfo/${params.id}`)
+        loader: ({params}) => fetch(`https://chef-recipe-hunter-server-tasnimafsara12-gmailcom.vercel.app/chefInfo/${params.id}`)
       },
       {
         path: '/login',
