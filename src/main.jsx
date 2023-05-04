@@ -15,6 +15,7 @@ import PrivateRoute from './components/routes/PrivateRoute';
 import Profile from './components/Profile/Profile';
 import ChefInfo from './components/ChefInfo/ChefInfo';
 import ErrorPage from './components/ErrorPage';
+import Blog from './components/Blog/Blog';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element:<PrivateRoute><Profile></Profile></PrivateRoute>
+      },
+      {
+        path: '/blog',
+        element:<Blog></Blog>
       },
       
     ]

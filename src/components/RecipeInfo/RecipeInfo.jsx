@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RecipeInfo = ({recipe}) => {
-    const {cooking_method,recipe_name,ingredients,recipe_img} = recipe;
+    const {cooking_method,recipe_name,ingredients,recipe_img,rating} = recipe;
     return (
         <div>
             
@@ -9,8 +9,11 @@ const RecipeInfo = ({recipe}) => {
   <div className="card-body">
     {/* <p>Experience : {cooking_method}</p> */}
     <img src={recipe_img} alt="" />
-    <p>Recipe Name : {recipe_name}</p>
-    <p>Ingredients : {ingredients}</p>
+    <p className='text-xl'>Recipe Name : <span className='text-sky-700'>{recipe_name}</span></p>
+    <hr></hr>
+    <p><span className='text-xl'>Ingredients :</span> {ingredients}</p>
+    <p><span className='text-xl'>Cooking Method :</span> {cooking_method}</p>
+    <p><span className='text-xl'>Rating :</span> {rating}</p>
 
     
   </div>

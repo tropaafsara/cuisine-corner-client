@@ -14,8 +14,8 @@ const NewsCard = ({info}) => {
                 <figure><img className='w-full' src={picture}/></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
-                    <p>Experience : {years_of_experience}</p>
-                    <p>num_recipes: {recipeInfo.length}</p>
+                    <p>Years Of Experience : {years_of_experience} yrs</p>
+                    <p>No. Of Recipes: {recipeInfo.length}</p>
                     <p>Likes : {likes}</p>
                         <div className="card-actions justify-end">
                             <Link to={`/chefInfo/${_id}`}>
