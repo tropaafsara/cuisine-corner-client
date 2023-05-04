@@ -9,7 +9,7 @@ const ChefInfo = () => {
     return (
         <div>
             <h1 className='text-center text-4xl mb-5'>Chef Info</h1>
-            <div className='flex  gap-8 justify-center items-center border mx-8'>
+            <div className='flex gap-8 justify-center items-center border mx-8'>
             
             <div>
             <img className='w-full' src={chefInfo.picture}/>

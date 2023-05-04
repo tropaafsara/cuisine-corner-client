@@ -31,7 +31,7 @@ const Home = () => {
                 <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat delectus tempore voluptas dignissimos reprehenderit, similique error libero velit dicta quae et minima obcaecati. Officia incidunt ratione nobis ullam aliquam dolores?</p>
             </div>
             <h1 className='mb-8 text-4xl text-center'>Our Chefs</h1>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 '>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 ms-10'>
             {
                 chefInfos.map(info => <NewsCard
                 key={info._id}  

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {Rating} from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 const RecipeInfo = ({recipe}) => {
     const {cooking_method,recipe_name,ingredients,recipe_img,rating} = recipe;
     return (
@@ -13,7 +14,11 @@ const RecipeInfo = ({recipe}) => {
     <hr></hr>
     <p><span className='text-xl'>Ingredients :</span> {ingredients}</p>
     <p><span className='text-xl'>Cooking Method :</span> {cooking_method}</p>
-    <p><span className='text-xl'>Rating :</span> {rating}</p>
+    <div className='flex'>
+      <Rating style={{maxWidth:100}} value={rating} readOnly/>
+      <p><span className='text-xl'></span> {rating}</p>
+    </div>
+    
 
     
   </div>
