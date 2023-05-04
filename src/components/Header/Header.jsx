@@ -23,14 +23,17 @@ const Header = () => {
                     
 
                  <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg"  to='/'>Home</NavLink>
-                 <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg" to='/orders'>Orders</NavLink>
+                
                  {user && <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg" to='/profile'>Profile</NavLink>}
                  <NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg " to='/register'>Register</NavLink>
                  
                  
                  {  user ? 
                  <>
-                    <span>{user.email}</span>
+                    {/* <span>{user.displayName}</span> */}
+                    {console.log(user)}
+                    <img className='mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
+                    
                     <button onClick={handleLogout} className="btn btn-active btn-primary">Sign Out</button>
                  </>
                   :<><NavLink activeClassName="active" className="btn btn-ghost normal-case text-lg" to='/login'>Login</NavLink></> }

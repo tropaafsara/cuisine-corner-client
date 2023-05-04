@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Form, Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
+  const {user} = useContext(AuthContext);
 
     const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
 
@@ -47,6 +49,9 @@ const Login = () => {
     }
 
     return (
+      
+        
+      
         <div className="hero min-h-screen bg-white-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
@@ -55,6 +60,7 @@ const Login = () => {
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white-100">
       <form onSubmit={handleLogin} className="card-body">
+      
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -83,6 +89,9 @@ const Login = () => {
 
       <button onClick={handleGithubSignIn} className="btn btn-accent">Sign In with GITHUB</button>
       </div>
+      {user && (
+          <Navigate to="/profile" replace={true} />
+        )}
       </div>
     </div>
   </div>
