@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import NewsCard from '../NewsCard/NewsCard';
 import RecipeInfo from '../RecipeInfo/RecipeInfo';
+import { HiThumbUp } from "react-icons/hi";
 
 const ChefInfo = () => {
     const {id} = useParams();
@@ -19,7 +20,7 @@ const ChefInfo = () => {
             <h1 className='mb-3'><span className='text-xl'>Chef Bio : </span>{chefInfo.bio}</h1>
             <h1 className='text-xl mb-3 '> Years of Experience : {chefInfo.years_of_experience}yrs</h1>
             <h1 className='text-xl mb-3 '>No. of Recipes : {chefInfo.recipeInfo.length}</h1>
-            <h1 className='text-xl mb-3 '>Likes : {chefInfo.likes}</h1>
+            <p className='flex align-center gap-2'><HiThumbUp></HiThumbUp>{chefInfo.likes} </p>
             </div>
             </div>
 
